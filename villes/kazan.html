@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kazan — Russie WorldEra</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+  .city-hero {
+    min-height: 60vh; display: flex; align-items: flex-end;
+    position: relative; overflow: hidden; padding-top: 64px;
+    background: linear-gradient(160deg, #050a10 0%, #0a1520 40%, #050810 100%);
+  }
+  .city-hero-glow {
+    position: absolute; top: 30%; left: 40%;
+    transform: translate(-50%, -50%);
+    width: 800px; height: 500px;
+    background: radial-gradient(ellipse, rgba(30,80,139,0.22) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .city-hero-content {
+    position: relative; z-index: 2;
+    padding: 0 3rem 4rem; max-width: 1100px; margin: 0 auto; width: 100%;
+  }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 2rem;
+  }
+  .breadcrumb a { color: var(--gold); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .city-hero-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+  .city-hero-tag { font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .city-hero-title { font-family: 'Cinzel', serif; font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 700; line-height: 1; color: var(--text); margin-bottom: 1.5rem; }
+  .city-hero-divider { width: 60px; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin-bottom: 1.8rem; }
+  .city-hero-lead { max-width: 580px; font-size: 1.05rem; line-height: 1.85; color: var(--text-muted); font-weight: 300; margin-bottom: 2.5rem; }
+  .city-hero-badges { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .badge { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 14px; border: 1px solid; }
+  .badge-culture { color: #7EB8D4; border-color: rgba(126,184,212,0.4); }
+  .badge-active { color: #4CAF7D; border-color: rgba(76,175,125,0.35); }
+  .discord-cta {
+    display: inline-flex; align-items: center; gap: 0.9rem;
+    padding: 1rem 2rem;
+    background: rgba(88,101,242,0.12); border: 1px solid rgba(88,101,242,0.4);
+    color: var(--text); text-decoration: none;
+    font-family: 'Cinzel', serif; font-size: 0.8rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .discord-cta:hover { background: rgba(88,101,242,0.22); border-color: rgba(88,101,242,0.7); }
+  .discord-cta-icon { font-size: 1.3rem; }
+  .city-content { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+  .city-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start; }
+  .info-blocks { display: flex; flex-direction: column; gap: 2.5rem; }
+  .info-block h3 { font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--text); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid rgba(201,168,76,0.15); }
+  .info-block p { font-size: 0.9rem; line-height: 1.85; color: var(--text-muted); font-weight: 300; }
+  .sidebar { display: flex; flex-direction: column; gap: 1.2rem; }
+  .sidebar-card { background: var(--dark3); border: 1px solid rgba(201,168,76,0.1); padding: 1.4rem 1.5rem; }
+  .sidebar-card-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+  .sidebar-card-value { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--text); }
+  .back-section { background: var(--dark2); border-top: 1px solid rgba(201,168,76,0.08); padding: 3rem 2rem; text-align: center; }
+  @media (max-width: 800px) { .city-grid { grid-template-columns: 1fr; } .city-hero-content { padding: 0 1.5rem 3rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">🦅 WorldEra — Russie</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../index.html#propos">À propos</a></li>
+    <li><a href="../index.html#villes" class="active">Villes</a></li>
+    <li><a href="../index.html#regles">Règles</a></li>
+  </ul>
+</nav>
+
+<div class="city-hero">
+  <div class="city-hero-glow"></div>
+  <div class="city-hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">Russie</a>
+      <span>›</span>
+      <span>Villes</span>
+      <span>›</span>
+      <span>Kazan</span>
+    </div>
+    <div class="city-hero-icon">⛩️</div>
+    <p class="city-hero-tag">Ville culturelle</p>
+    <h1 class="city-hero-title">Kazan</h1>
+    <div class="city-hero-divider"></div>
+    <p class="city-hero-lead">Carrefour des cultures et des traditions, Kazan incarne la richesse et la diversité de la Russie. Un centre d'échange, d'art et de commerce au cœur de la nation.</p>
+    <div class="city-hero-badges">
+      <span class="badge badge-culture">⛩ Culture</span>
+      <span class="badge badge-active">✦ Active</span>
+    </div>
+    <a class="discord-cta" href="https://discord.gg/XNecZvYrQU" target="_blank">
+      <span class="discord-cta-icon">💬</span>
+      Rejoindre le Discord de Kazan
+    </a>
+  </div>
+</div>
+
+<div class="city-content">
+  <div class="city-grid">
+    <div class="info-blocks">
+
+      <div class="info-block">
+        <h3>Présentation</h3>
+        <p>Kazan est la perle culturelle de la Russie sur WorldEra. Nichée à la croisée des traditions slaves et tatares, la ville est un lieu de rencontre unique où s'entremêlent architectures, savoirs et échanges commerciaux. Son atmosphère singulière en fait l'une des villes les plus vivantes de la nation.</p>
+      </div>
+
+      <div class="info-block">
+        <h3>Rôle dans la nation</h3>
+        <p>Kazan joue un rôle essentiel dans l'identité culturelle de la Russie. Elle accueille les marchés, les forums diplomatiques et les événements communautaires qui renforcent les liens entre les différentes villes de la nation. Sa position géographique en fait également un nœud commercial stratégique.</p>
+      </div>
+
+      <div class="info-block">
+        <h3>Comment nous rejoindre ?</h3>
+        <p>Rejoignez le Discord de Kazan via le bouton ci-dessus, présentez-vous dans le canal d'accueil et un citoyen de la ville vous guidera dans votre installation. Les candidatures sont ouvertes à tous les joueurs de WorldEra souhaitant s'intégrer dans une communauté active.</p>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-label">Statut</div>
+        <div class="sidebar-card-value">✦ Active</div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-label">Rôle</div>
+        <div class="sidebar-card-value">Ville culturelle</div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-label">Nation</div>
+        <div class="sidebar-card-value">🦅 Russie</div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-label">Serveur</div>
+        <div class="sidebar-card-value">WorldEra</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="back-section">
+  <a class="btn-outline" href="../index.html#villes">← Voir toutes les villes</a>
+</div>
+
+<footer>
+  <div class="footer-logo">🦅 République Russe — WorldEra</div>
+  <p class="footer-sub">Nation officielle sur le serveur WorldEra · Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
